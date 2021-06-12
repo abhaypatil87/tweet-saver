@@ -1,0 +1,35 @@
+{
+  "name": "twitter_server",
+  "version": "1.0.0",
+  "description": "A backend server written in NodeJS, and Koa",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhaypatil87/save-on-tweets"
+  },
+  "bugs": {
+    "url": "https://github.com/abhaypatil87/save-on-tweets/issues"
+  },
+  "author": "Abhay Patil, <abhaypatil87@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "joi": "^17.4.0",
+    "kcors": "^2.2.2",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json-error": "^3.1.2",
+    "koa-router": "^10.0.0",
+    "koa-useragent": "^4.0.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "prettier": "2.3.0"
+  }
+}
