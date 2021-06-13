@@ -1,4 +1,7 @@
-import { Box, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
+import { Grid, makeStyles, Paper, Typography } from "@material-ui/core";
+import { useDrag } from "react-dnd";
+
+import { ItemTypes } from "../../utils/ItemTypes";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -9,10 +12,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Tweet = (props) => {
+  const [{ opacity }, drag] = useDrag(
+    () => ({
+      type: ItemTypes.TWEET,
+      item: { ...props },
+      end: (item, monitor) => {},
+      collect: (monitor) => ({
+        isDragging: !!monitor.isDragging(),
+        opacity: monitor.isDragging() ? 0.5 : 1,
+      }),
+    }),
+    []
+  );
+
   const ariaLabel = props.handle;
   const classes = useStyles();
   return (
-    <Box component="div" marginTop={2}>
+    <div ref={drag} style={{ opacity, marginTop: "12px" }}>
       <Paper elevation={3} className={classes.paper}>
         <Grid item xs={12} sm container>
           <Grid aria-label={ariaLabel}>
@@ -30,7 +46,7 @@ const Tweet = (props) => {
           </Grid>
         </Grid>
       </Paper>
-    </Box>
+    </div>
   );
 };
 
