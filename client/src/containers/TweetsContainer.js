@@ -2,8 +2,8 @@ import { makeStyles } from "@material-ui/core";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 
-import Tweets from "../components/Tweets/Tweets";
-import SavedTweets from "../components/SavedTweets/SavedTweets";
+import { Tweets } from "../components/Tweets";
+import { SavedTweets } from "../components/SavedTweets";
 
 const useStyles = makeStyles(() => ({
   flexContainer: {

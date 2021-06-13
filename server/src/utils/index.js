@@ -10,8 +10,8 @@ const T = new Twit({
 const fetchTwitterApiResponse = async (queryParams) => {
   try {
     return await T.get("search/tweets", {
-      q: "UNICEF since:2021-06-01",
-      count: 10,
+      q: queryParams.q || "",
+      count: queryParams.count || 100,
     });
   } catch (error) {
     throw error;

@@ -9,6 +9,9 @@ const storageWrapper = {
   set: function (k, v) {
     localStorage.setItem(k, JSON.stringify(v));
   },
+  remove: function (k) {
+    localStorage.removeItem(k);
+  },
 };
 
 export default storageWrapper;
