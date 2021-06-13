@@ -27,7 +27,7 @@ const SearchBar = (props) => {
         onChange={(event) => {
           setUserInput(event.target.value);
         }}
-        inputProps={{ "aria-label": "search tweets" }}
+        inputProps={{ "aria-label": "enter search terms" }}
       />
       <InputBase
         style={{ width: "10%" }}
@@ -37,7 +37,7 @@ const SearchBar = (props) => {
         onChange={(event) => {
           setCount(event.target.value);
         }}
-        inputProps={{ "aria-label": "number of tweets" }}
+        inputProps={{ "aria-label": "enter the number of tweets" }}
       />
       <IconButton
         type="button"

@@ -102,7 +102,8 @@ const SavedTweets = () => {
           border: isOver ? "5px solid lightgrey" : "5px solid darkgrey",
         }}
       >
-        {savedTweets.length > 0 &&
+        {savedTweets &&
+          savedTweets.length > 0 &&
           savedTweets.map((tweet) => (
             <Tweet
               key={tweet.id}

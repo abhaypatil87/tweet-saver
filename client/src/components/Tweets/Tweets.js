@@ -30,7 +30,15 @@ const Tweets = () => {
         `http://${SERVER_URL}:${SERVER_PORT}/api/tweets?${searchTerm}`
       );
       response = await response.json();
-      setTweets(response.tweets.data.statuses);
+
+      if (response.tweets.data.statuses.length === 0) {
+        setIsOpen(true);
+        setInfoMessage(
+          "Unfortunately, no tweets found with the given search term"
+        );
+      } else {
+        setTweets(response.tweets.data.statuses);
+      }
     };
 
     if (searchTerm.trim().length === 0) {

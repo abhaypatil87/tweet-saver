@@ -18,7 +18,7 @@ const TweetsContainer = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.flexContainer}>
+    <div className={classes.flexContainer} role="main">
       <DndProvider backend={HTML5Backend}>
         <div className={classes.flexChild}>
           <Tweets />
