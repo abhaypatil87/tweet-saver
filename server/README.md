@@ -52,7 +52,6 @@ A software is an ongoing process!
 As far as I can think of at the moment, some TODO items are as below:
 
 * **Authorisation**
-* **Accessibility**
 * **Testing**, more automated testing, and more testing!
-* Better error/exception handling
+* More error/exception handling scenarios
 * Logging capabilities
